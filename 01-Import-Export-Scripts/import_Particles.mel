@@ -1,0 +1,31 @@
+/*
+Author: 
+computation and design (co |de), ZH Architects
+10, Bowling Green lane. London, EC1R 0BQ, UK.
+
+
+1. select and export points from rhino as points file, with comma separation and no quotes.
+2. change path to the file in the script below.
+3. running script will make locators according to coordinates from rhino.
+
+
+*/
+
+
+string $output[];
+float $x,$y,$z;
+ $exampleFileName = ("C:\\Users\\Thomas\\Desktop\\nodes_125.txt" );
+ $fileId=`fopen $exampleFileName "r"`;
+
+string $nextLine = `fgetline $fileId`;
+ 	while ( size( $nextLine ) > 0 )
+	{ 
+	print ( $nextLine );
+	tokenize($nextLine,",",$output);
+	$x=$output[0];$y=$output[1];$z=$output[2];
+	
+	particle -p $x $y $z;
+	$nextLine = `fgetline $fileId`;
+	//print($output);
+ 	}	
+fclose $fileId; 
