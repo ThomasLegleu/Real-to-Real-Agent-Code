@@ -1,5 +1,6 @@
-This code was generated at Southern California Institute of Architecture.
+## About
 
-It was developed for my thesis project " Real to Real "
+- This code was generated at Southern California Institute of Architecture during my graduate thesis work " Real to Real "
 
-It was developed from course work with Michael Casey Rehm over the Spring and Summer of 2015.
+- It was developed from course work with Michael Casey Rehm from the Spring and Summer of 2015.
+
